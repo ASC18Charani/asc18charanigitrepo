@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width:250px;height: 250px; background-color:white">
+        <img src="off.gif" style="margin:50px" id="offBulb">
+    </div>
+
+    <div style="width:250px;height: 250px; background-color: black" id="container">
+        <img src="on.gif" style="margin:50px" id="onBulb">
+    </div>
+
+
+    <div id="dynamicBulb">
+
+    </div>
+
+    <!-- <script> -->
+    <!-- // function updateImg() {
+                //     var ImageElement = document.getElementById("bulb");
+                //     ImgElement.innerHTML = src="on.gif";
+                //     document.body.style.backgroundColor= "black";
+                // } -->
+    <!-- bulb.onmouseover = function() {
+    bulb.style.backgroundColor = "black";
+    bulb.src="on.gif"; // Use quotes for color value and correct property name
+};
+bulb.onmouseout = function() {
+    bulb.style.backgroundColor = "White";
+    bulb.src="off.gif";
+}
+bulb.onclick = function() {
+    bulb.style. backgroundColor = "white";
+    bulb.src="none";
+}
+                </script> -->
+    <script>
+
+        //   var bulb = document.createElement("bulb");
+        // bulb.onclick = function {
+        //     bulb.src="off.gif";
+        // bulb.body.appendChild(bulb);
+        // }
+        var onBulb = document.getElementById("onBulb");
+        onBulb.onclick = function () {
+            onBulb.style.display = "none";
+            // div.style.backgroundcolor="white";
+
+            var div = document.getElementById("container");
+            // bulb.onclick = function() {
+            // bulb.style.display="none";
+            // div.style.background-color="white";
+            div.style.backgroundColor = "white";
+        }
+        var offBulb=document.getElementById("offBulb");
+        offBulb.onclick = function() {
+            var div = document.getElementById("dynamicBulb");
+            div.innerHTML = div.innerHTML + '<div style="width:250px;height: 250px; background-color:white" class="bulb off">' +
+                ' <img src="off.gif" style="margin:50px">';
+                offBulb.src="on.gif";
+            
+        }
+        // var offBulb=document.getElementById("offBulb");
+        // offBulb.onclick = function() {
+        //     offBulb.src="on.gif";
+        // }
+        // var offBulb = document.createElement("bulb");
+        // bulb.onclick = function {
+        // bulb.body.appendChild(bulb1);
+        // }
+        // var bulb = document.createElement("div"); // Use "div" or another valid HTML element
+        //   bulb.onclick = function() { // Missing parentheses after 'function'
+        //  var bulb1 = document.createElement("div"); // Create 'bulb1' here
+        //   bulb.appendChild(bulb); // Append 'bulb1' to 'bulb'
+        //  };
+        ///var bulb=document.getElementById("bulb").addEventListener("click",funtion(){
+        //   const newBulb = document.createElement('bulb');
+        //   newBulb.className="bulb off";
+        //   document.body.appendChild(newbulb);
+        // newBulb.addEventListener('')
+        // })
+
+
+    </script>
+
+
+</body>
+
+</html>

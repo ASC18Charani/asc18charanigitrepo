@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+    <!-- specifies this is a html 5 document -->
+    <style>
+        /* .lhs {
+        margin-left: 100;
+        padding-top: 10;
+        padding-right: 250;
+    }
+
+    .rhs {
+        margin-right: 50;
+        padding-top: 15;
+        padding-left: 5;
+         padding-right: 150; 
+    } */
+
+        td {
+            padding-right: 0px;
+            padding-left: 120px;
+            width: 300px;
+        }
+
+        /* .td1 {
+        padding-right: 0px;
+        padding-left: 180px;
+    } */
+        .td2 {
+            padding-right: 0px;
+            padding-left: 20px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script>
+        function updateVideo() {
+            var VideoElement = document.getElementById("Action");
+            VideoElement.innerHTML = '<iframe width="580" height="326" src="https://www.youtube.com/embed/l4B1UflAty8" title="Microsoft Copilot: Your everyday AI companion" ></iframe>';
+        }
+        function updateVideo1() {
+            var VideoElement = document.getElementById("Action");
+            VideoElement.innerHTML = '<iframe width="424" height="238" src="https://www.youtube.com/embed/Gz0jPfCuvsM" ></iframe>';
+
+        }
+    </script>
+
+</head>
+
+<body style="margin-left: 200px;">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!---- <table>
+            <tr>
+                <td>     --->
+    <!-- </td> --->
+    <!-- <td> <img src="html5.png" style="padding-left:250px"/></td> -->
+    <!-- </tr>
+        </table> -->
+    <!-- <br/><br/><br/>
+        <h2>DOB</h2>
+        <input type="date" id="dob" max="2021-10-04">
+
+        <br/><br/><br/> -->
+
+
+    <h1 style="font-style:italic; margin-left: 270px; margin-bottom: 20px;">Registration Form</h1>
+    <div style="background-color: rgb(106, 139, 139); width: 80%">
+        <!-- <form style="background-color: red;"> -->
+        <form>
+            <div style="padding:50px">
+                <table style="width:700px;padding-top:100px;"> <!--background-color: yellow;" -->
+                    <tr>
+                        <td class="td1"> Enter your Name : </td>
+
+                        <td class="td2"> <input type="text" id="name" style="background-color: rgb(235, 105, 50);" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Enter your Password : </td>
+                        <td class="td2"> <input type="password" id="password" /> </td>
+                    </tr>
+                    <!-- <br/><br/> -->
+                    <!-- <h2>DOB</h2> -->
+                    <tr>
+                        <td> Email : </td>
+                        <td class="td2"> <input type="email" id="email" /> </td>
+                    </tr>
+                    <tr>
+                        <td> DOB : </td>
+                        <td class="td2"> <input type="date" id="dob" max="2070-12-31"> </td>
+                    </tr>
+
+                    <tr>
+                        <td> Address : </td>
+                        <td class="td2"><textarea cols="15" rows="3" id="address"></textarea> </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width:500px"> Beverage Preference : <br /> </td>
+                        <td class="td2"> <input type="checkbox" id="tea"> Tea &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" id="coffee"> Coffee &nbsp; &nbsp; &nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> Gender : <br /> </td>
+                        <td class="td2"><input type="radio" name="gender" id="male"> Male &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="gender" id="female"> Female &nbsp; &nbsp; &nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> Meal : <br /> </td>
+                        <td class="td2"> <input type="radio" name="meal" id="veg"> Veg &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="meal" id="nonveg"> Nonveg &nbsp; &nbsp; &nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> Payment : </td>
+                        <td class="td2"> <select  id="payment">
+                                <option value="Credit Card">Credit Card</option>
+                                <option value="Debit Card">Debit Card</option>
+                                <option value="Cash">Cash</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Slider : </td>
+                        <td class="td2"> <input type="range" id="slider" name="rangeSlider" min="0" max="100" value="50"
+                                step="10">
+                        </td>
+                    </tr>
+
+
+
+                    <!-- input is element
+         value is attribute
+         type is attribute
+         style is an attribute
+         color is a css property and red is the value -->
+                </table>
+            </div>
+            <!-- <br> -->
+            <center>
+                <input value="Register Now!" id="sub" type="submit" style="color:red; 
+     font-weight: bold; background-color: yellow;
+     height: 50px;width:120px; margin-bottom: 20px;" />
+
+                <!-- <input type="submit" class="btn btn-primary"></input> -->
+
+                <input value="Reset!" type="submit" style="color:red;
+     font-weight: bold; background-color: yellow;
+    height: 50px;width:100px;" />
+            </center>
+
+        </form>
+    </div>
+    <br> <br>
+
+    <!-- <h1 style="font-style:italic; margin-left: 270px; margin-bottom: 20px;">Submitted Form</h1> -->
+    <div style="background-color: rgb(106, 139, 139); width: 80px" id="Result">
+    <table>
+        <!-- <div style="background-color: rgb(106, 139, 139); width: 80%" id="Result"> -->
+            <h4 style="font-style: italic; margin-left: 270px; margin-bottom: 20px;">Submitted Form</h4>
+            <tr>
+                <td>Name</td>
+                <td id="display_name"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td id="display_password"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td id="display_email"></td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td id="display_dob"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td id="display_address"></td>
+            </tr>
+            <tr>
+                <td>Beverage Preference</td>
+                <td id="display_tea"></td>
+                <td id="display_coffee"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="display_male"></td>
+                <td id="display_female"></td>
+            </tr>
+            <tr>
+                <td>Meal</td>
+                <td id="display_veg"></td>
+                <td id="display_nonveg"></td>
+            </tr>
+            <tr>
+                <td>Payment</td>
+                <td id="display"></td>
+                <!-- <td id="display_debit"></td>
+                <td id="display_cash"></td> -->
+            </tr>
+            <tr>
+                <td>Slider</td>
+                <td id="display_slider"></td>
+            </tr>
+            <!-- <form>
+         <div style="padding:50px" style="background-color: rgb(236, 202, 202);">
+            <table style="width:700px;padding-top:100px;" id="Table">
+                
+
+                </table>
+                <</div> 
+                </form> -->
+        <!-- </div> -->
+    </table>
+    <br>
+    </div>
+    <br> <br>
+
+    <center>
+        <div style="margin-right: 250px;">
+            <h3 style="font-style:italic;"> Audio & Video </h3> <br>
+            <audio src="horse.mp3" controls autoplay muted></audio>
+            <br /> <br>
+            <!-- <video scr="mov bbb.mp4" width="500px" height="500px" controls autoplay muted></video> -->
+            <h1> <i> Types of Videos </i> </h1>
+            <button onclick="updateVideo()"> Video </button>
+            <!-- <select>
+            <option>Nature</option>
+            <option>Action</option> -->
+            <!-- <option>Comedy</option> -->
+            <!-- </select> -->
+            <button onclick="updateVideo1()"> Video 1
+            </button>
+            <div id="Action"></div>
+
+            <br> <br>
+
+            <!-- <button onclick="updateVideo()"> Video  -->
+
+
+            <!-- <button onclick="updateVideo()"> Video
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jAa58N4Jlos?si=AJOpXcHVgWsRuqmq"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </button>
+
+            <button onclick="updateVideo()"> Video
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jAa58N4Jlos?si=AJOpXcHVgWsRuqmq"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </button> -->
+        </div>
+    </center>
+
+    <!-- <script>
+        function updateVideo() {
+            var VideoElement = document.getElementById("Video");
+            VideoElement.innerHTML = <iframe width="560" height="315" src="https://youtu.be/BNpQlvvtEgI?si=kwhp_VaogEjhcCLL"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        }
+    </script> -->
+
+
+    <script>
+        // <form onsubmit="event.preventDefault(); form();">
+        // function diaplayData(event) {
+        //     event.preventDefault();
+        // }
+        // function form() {
+        //     const nam = document.getElementById("Name").value;
+        //     console.log(nam);
+        //     // const Enter your Password : = document.getElementById("Password").value;
+        //     const emai= document.getElementById("Email").value;
+        //     const DOB = document.getElementById("DOB").value;
+        //     const Address = document.getElementById("Address").value;
+        //     const tea = document.getElementById("tea").checked;
+        //     const coffee = document.getElementById("coffee").checked;
+        //     const gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').id : '';
+        //     const meal = document.querySelector('input[name="meal"]:checked') ? document.querySelector('input[name="meal"]:checked').id : '';
+        //     const Payment = document.getElementById("Payment").value;
+
+        //     let resultHTML = '<h2>Submitted Data:</h2>';
+
+        // if(Enter your name) {
+        //     data.Name= Enter your name;
+        // }
+        // // if(Enter your Password) {
+        // //     data.Password = Enter your Password;
+        // // }
+        // if(Email) {
+        //     data.Email = Email;
+        // }
+        // if(DOB) {
+        //     data.DOB = DOB;
+        // }
+        // if(Address) {
+        //     data.Address = Address;
+        // }
+        // if(Beverage Preference) {
+        //     data.Beverage Preference = Beverage Preference;
+        // }
+        // if(Gender) {
+        //     data.Gender = Gender;
+        // }
+        // if(Meal) {
+        //     data.Meal = Meal;
+        // }
+        // if(Payment) {
+        //     data.Payment = Payment;
+        // }
+
+        //     resultHTML += `<p>Name: ${name}</p>`;
+        //     resultHTML += `<p>Email: ${email}</p>`;
+        //     resultHTML += `<p>DOB: ${dob}</p>`;
+        //     resultHTML += `<p>Address: ${address}</p>`;
+        //     resultHTML += `<p>Beverage Preference: ${tea ? 'Tea' : ''} ${coffee ? 'Coffee' : ''}</p>`;
+        //     resultHTML += `<p>Gender: ${gender}</p>`;
+        //     resultHTML += `<p>Meal: ${meal}</p>`;
+        //     resultHTML += `<p>Payment: ${payment}</p>`;
+
+
+        //     document.getElementById('Result').innerHTML = resultHTML;
+        // }
+
+        // var sub = document.getElementById("Submit");
+        // sub.addEventListener("click", displayData);
+
+        // function displayData(event) {
+        //     event.preventDefault();
+
+        //     var nam = document.getElementById("name").value;
+        //     var pass = document.getElementById("password").value;
+        //     var emal = document.getElementById("email").value;
+        //     var db = document.getElementById("dob").value;
+        //     var addr = document.getElementById("address").value;
+        //     var tea = document.getElementById("tea").checked ? 'Tea' : '';
+        //     var coffee = document.getElementById("coffee").checked ? 'Coffee' : '';
+        //     var gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').id : '';
+        //     var meal = document.querySelector('input[name="meal"]:checked') ? document.querySelector('input[name="meal"]:checked').id : '';
+        //     var payment = document.querySelector('select').value; // Getting selected payment method
+        // var nam = document.getElementById("name").value;
+        // var nam = document.getElementById("name").value;
+        // var nam = document.getElementById("name").value;
+        // var nam = document.getElementById("name").value;
+        // var nam = document.getElementById("name").value;
+        // var nam = document.getElementById("name").value;
+
+
+        //     let resultHTML = `<h2>Submitted Data:</h2>`;
+        //     resultHTML += `<p>Name: ${nam}</p>`;
+        //     resultHTML += `<p>Password: ${pass}</p>`;
+        //     resultHTML += `<p>Email: ${emal}</p>`;
+        //     resultHTML += `<p>DOB: ${db}</p>`;
+        //     resultHTML += `<p>Address: ${addr}</p>`;
+        //     resultHTML += `<p>Beverage Preference: ${tea} ${coffee}</p>`;
+        //     resultHTML += `<p>Gender: ${gender}</p>`;
+        //     resultHTML += `<p>Meal: ${meal}</p>`;
+        //     resultHTML += `<p>Payment: ${payment}</p>`;
+        //     document.getElementById('Result').innerHTML = resultHTML;
+
+
+
+        // }
+
+        var sub = document.getElementById("sub");
+        console.log(sub);
+        sub.addEventListener("click", (e) => {
+            e.preventDefault();
+            var name = document.getElementById("name").value;
+            var display = document.getElementById("display_name").innerHTML = name;
+            // display.innerHTML = name;
+            var password = document.getElementById("password").value;
+            var displaypass = document.getElementById("display_password");
+            displaypass.innerHTML = password;
+            var email = document.getElementById("email").value;
+            var displaymail = document.getElementById("display_email");
+            displaymail.innerHTML = email;
+            var dob = document.getElementById("dob").value;
+            var displaybirth = document.getElementById("display_dob");
+            displaybirth.innerHTML = dob;
+            var address = document.getElementById("address").value;
+            var displayadd = document.getElementById("display_address");
+            displayadd.innerHTML = address;
+            // var beveragepreference = document.getElementById("tea").value;
+           var beveragepreference = [];
+            if (document.getElementById("tea").checked) {
+                beveragepreference.push("tea");
+            }
+            // display_tea.innerHTML = beveragepreference;
+            if (document.getElementById("coffee").checked) {
+                beveragepreference.push("coffee");
+            }
+            display_tea.innerHTML = beveragepreference;
+
+            gender = [];
+            if (document.getElementById("male").checked) {
+                gender.push("male");
+            }
+            if (document.getElementById("female").checked) {
+                gender.push("female");
+            }
+            display_male.innerHTML = gender;
+            meal = [];
+            if (document.getElementById("veg").checked) {
+                meal.push("veg");
+            }
+            if (document.getElementById("nonveg").checked) {
+                meal.push("nonveg");
+            }
+            display_veg.innerHTML = meal;
+
+
+
+        //    var payment = [];
+
+           var payments=document.getElementById("display");
+           var pay=document.getElementById("payment");
+            // if (document.getElementById("credit").checked) {
+            //     payment.push("Credit Card");
+            // }
+            // if (document.getElementById("debit").checked) {
+            //     payment.push("Debit Card");
+            // }
+            // if (document.getElementById("cash").checked) {
+            //     payments.push("cash");
+            // }
+
+            //  evannnni avashram ledu ,,,,,,select id ni target chesi value tisko anthe!!!!!!!!!!
+
+            payments.innerHTML = pay.value;
+
+            // var payment = document.querySelector('select').value;
+            // document.getElementById("display_select").innerHTML = payment;
+
+            var sliders=document.getElementById("slider");
+            var slid = document.getElementById("display_slider");
+            slid.innerHTML = sliders.value;
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

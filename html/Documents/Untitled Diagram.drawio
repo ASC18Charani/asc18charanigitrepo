@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0" version="24.7.17">
+  <diagram name="Page-1" id="5mTquYAhtm0TKP1WSChi">
+    <mxGraphModel dx="786" dy="457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-2" value="Languages using with ; , }" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="90" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-3" value="C, C++, Python, Java" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-4" value="List languages with keywords FROM to JOIN UNION" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="90" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-5" value="List languages with OS related COMMANDS DIR, LS CP, MV" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="90" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-6" value="Languages with tags &amp;lt;input&amp;gt; &amp;lt;/input&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="90" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-9" value="java, python, sql&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-10" value="sql,&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-11" value="HTML, XML" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-12" value="Markup language" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-13" value="Programming language" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-14" value="Scripting language" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-15" value="Query language" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-16" value="Describing data and presentation" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-17" value="Create full application with logical structure" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-18" value="Automates tasks" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-19" value="Retrevies data and database" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="610" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-21" value="Html tags" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-22" value="Elements" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-23" value="Inline" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-24" value="Block" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-25" value="H1...H6&lt;div&gt;OL&lt;/div&gt;&lt;div&gt;LI&lt;/div&gt;&lt;div&gt;TABLE&lt;/div&gt;&lt;div&gt;A&lt;/div&gt;&lt;div&gt;B&lt;/div&gt;&lt;div&gt;I&lt;/div&gt;&lt;div&gt;SUP&lt;/div&gt;&lt;div&gt;SUB&lt;/div&gt;&lt;div&gt;CODE&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="850" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-26" value="Categorize the inline and block elements and apply in your instant lab" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="890" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-27" value="H1....H6&lt;div&gt;OL&lt;/div&gt;&lt;div&gt;LI&lt;/div&gt;&lt;div&gt;Table&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="895" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="slpUlAYzAh_k5ERFgeqQ-28" value="A&lt;div&gt;B&lt;/div&gt;&lt;div&gt;I&lt;/div&gt;&lt;div&gt;SUP&lt;/div&gt;&lt;div&gt;SUB&lt;/div&gt;&lt;div&gt;CODE&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="877.5" width="150" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    
+// List of data types in JavaScript and definition, and necessity of each data type
+// 1. String - A sequence of characters enclosed in single or double quotes that is used to represent text data. Strings are essential for working with textual data in JavaScript.
+// 2. Number - A numeric value that is used to represent numerical data. Numbers are essential for performing mathematical operations in JavaScript.
+// 3. Boolean - A logical value that can be either true or false and is used to represent the truth value of an expression. Booleans are essential for making decisions and controlling the flow of a program in JavaScript.
+// 4. Array  - A collection of elements enclosed in square brackets that is used to store multiple values in a single variable. Arrays are essential for working with lists of data in JavaScript.
+// 5. Object    - A collection of key-value pairs enclosed in curly braces that is used to represent complex data structures. Objects are essential for organizing and manipulating data in JavaScript.
+// 6. Function - A block of code that performs a specific task and can be reused throughout a program. Functions are essential for organizing code and implementing reusable logic in JavaScript.
+// 7. Null - A special value that represents the absence of any value and is used to indicate that a variable does not have a value. Null is essential for handling cases where a value is intentionally missing or not applicable in JavaScript.
+// 8. Undefined - A special value that represents an uninitialized variable or a variable that has not been assigned a value. Undefined is essential for handling cases where a variable has not been explicitly set to a value in JavaScript.
+
+// List all kewords in the code and define
+// 1. var - A keyword used to declare a variable
+// 2. console - A global object that provides access to the browser console
+// 3. log - A method of the console object used to print messages to the console
+// 4. typeof - An operator that returns the data type of a variable or expression
+
+
+// String
+var str = "Hello, World!";
+console.log("String:", str);
+console.log("Type of str:", typeof str);
+
+// Number
+var num = 42;
+console.log("Number:", num);
+console.log("Type of num:", typeof num);
+
+// Boolean
+var bool = true;
+console.log("Boolean:", bool);
+console.log("Type of bool:", typeof bool);
+
+// Array
+var arr = [1, 2, 3, 4, 5];
+console.log("Array:", arr);
+console.log("Type of arr:", typeof arr);
+
+// Object
+var obj = {
+    name: "John Doe",
+    age: 30,
+    city: "New York"
+};
+console.log("Object:", obj);
+console.log("Type of obj:", typeof obj);
+
+// Function
+var func = function() {
+    return "Hello from function!";
+};
+console.log("Function:", func);
+console.log("Type of func:", typeof func);
+
+// Null
+var nullVar = null;
+console.log("Null:", nullVar);
+console.log("Type of nullVar:", typeof nullVar);
+
+// Undefined
+var undefinedVar;
+console.log("Undefined:", undefinedVar);
+console.log("Type of undefinedVar:", typeof undefinedVar);
+
+
+</script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+=============================================================
+console.log("external");
+function externalScript() {
+    console.log("the external script / modified")
+}
+
+externalScript();
+
+for( var i =0; i<5; i++){
+ console.log(i);
+ console.log("value of i is " + i);
+ console.log("value of i is " , i, ".");
+ 
+//  externalScript();
+}
+// external js
+// .js extension
+// statements / functions
+
+
+// defining the function
+// function anyNameofFunction() {
+//     console.log("this is an external function");
+// }
+
+// // calling/ invoking the function
+// anyNameofFunction();
+
+
+================================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- external js / used in multiple docs -->
+    <script>
+        console.log("s0");
+    </script>
+    <script src="3 external.js"></script>
+    <!-- internal js  / used across the document -->
+    <script>
+        console.log("s1");
+    </script>
+    <script>
+        console.log("s2");
+    </script>
+    <script>
+        function internalScript() {
+            console.log("the internal script")
+        }
+        console.log("*")
+        internalScript();
+    </script>
+    <script>
+        console.log("**");
+        internalScript();
+    </script>
+</head>
+<body>
+    <form>
+        <!-- inline / belongs to elemen t -->
+        <button onclick="alert('Welcome JS');">
+            Get Message
+        </button>
+        <button onclick='alert("Thankyou");console.log("Thankyou")'>
+            Say Thankyou
+        </button>
+        <!-- my default / submit the form -->
+        <button onclick='internalScript()'>
+            internal
+        </button>
+        <!-- does not submit to the server -->
+        <button type="button" onclick='internalScript()'>
+            internal
+        </button>
+        <button type="button" onclick='externalScript()'>
+            external
+        </button>
+    </form>
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Search</title>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Enter name prefix">
+    <button onclick="searchNames()">Case-Insensitive Search</button>
+    <button onclick="searchNamesCaseSensitive()">Case-Sensitive Search</button>
+    <button onclick="searchNamesExact()">Exact Match Search</button>
+    <button onclick="searchNamesAnywhere()">Search Anywhere in Name</button>
+    <ul id="resultList"></ul>
+
+    <script>
+        var names = [
+            "Ananya",
+            "Sandeep",
+            "Nitish",
+            "Bhargav",
+            "Jalaj",
+            "Harsh",
+            "Rohit",
+            "Rajat",
+            "Pavithra",
+            "Nitish",
+            "Uday",
+            "Swarneem",
+            "Komal",
+            "Pallavi",
+            "Harsh",
+            "Aayush",
+            "Bodha",
+            "Charani",
+            "Gaurav"
+        ];
+
+        // Function for case-insensitive search
+        function searchNames() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var resultList = document.getElementById('resultList');
+            resultList.innerHTML = '';
+
+            var filteredNames = names.filter(name => name.toLowerCase().startsWith(input));
+            filteredNames.forEach(name => {
+                var listItem = document.createElement('li');
+                listItem.textContent = name;
+                resultList.appendChild(listItem);
+            });
+
+            // input, process, output
+            // store output
+            var filteredNames;
+            names.filter();
+
+            function caseInsensitivekSearch(name, input) {
+                var output = name.toLowerCase.startsWith(input);
+                return output;
+            }
+            
+            name => name.toLowerCase().startsWith(input)
+           
+        }
+
+        // Function for case-sensitive search
+        function searchNamesCaseSensitive() {
+            var input = document.getElementById('searchInput').value;
+            var resultList = document.getElementById('resultList');
+            resultList.innerHTML = '';
+
+            var filteredNames = names.filter(name => name.startsWith(input));
+            filteredNames.forEach(name => {
+                var listItem = document.createElement('li');
+                listItem.textContent = name;
+                resultList.appendChild(listItem);
+            });
+        }
+
+        // Function for exact match search
+        function searchNamesExact() {
+            var input = document.getElementById('searchInput').value;
+            var resultList = document.getElementById('resultList');
+            resultList.innerHTML = '';
+
+            var filteredNames = names.filter(name => name === input);
+            filteredNames.forEach(name => {
+                var listItem = document.createElement('li');
+                listItem.textContent = name;
+                resultList.appendChild(listItem);
+            });
+        }
+
+        // Function for searching characters anywhere in the name
+        function searchNamesAnywhere() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var resultList = document.getElementById('resultList');
+            resultList.innerHTML = '';
+
+            var filteredNames = names.filter(name => name.toLowerCase().includes(input));
+            filteredNames.forEach(name => {
+                var listItem = document.createElement('li');
+                listItem.textContent = name;
+                resultList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
+=====================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+      var functionObj =   function caseInsensitiveSearch(name, input) {
+            var output = name.toLowerCase().startsWith(input);
+            return output;
+        }
+        // console.log(caseInsensitiveSearch('John Doe', 'j'));
+        console.log(functionObj('John Doe', 'o'));
+
+        //concise arrow function
+        var functionObj1 = (name, input) => name.toLowerCase().startsWith(input);
+        console.log(functionObj1('John Doe', 'j'));
+
+        console.log('(name, input) => name.toLowerCase().startsWith(input)');
+        console.log(((name, input) => name.toLowerCase().startsWith(input))("John Doe",'j'));
+
+        // console.log(((name, input) =>  name.toLowerCase().startsWith(input))("John",'j') );
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+==============================
