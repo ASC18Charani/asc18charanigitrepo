@@ -198,12 +198,12 @@
             </tr>
             <tr>
                 <td>Gender</td>
-                <td id="display_male"></td>
+                <td id="display_gender"></td>
                 <td id="display_female"></td>
             </tr>
             <tr>
                 <td>Meal</td>
-                <td id="display_veg"></td>
+                <td id="display_meal"></td>
                 <td id="display_nonveg"></td>
             </tr>
             <tr>
@@ -378,35 +378,91 @@
 
         // }
 
-        var sub = document.getElementById("sub");
-        console.log(sub);
-        sub.addEventListener("click", (e) => {
-            e.preventDefault();
-            var name = document.getElementById("name").value;
-            var display = document.getElementById("display_name").innerHTML = name;
-            // display.innerHTML = name;
-            var password = document.getElementById("password").value;
-            var displaypass = document.getElementById("display_password");
-            displaypass.innerHTML = password;
-            var email = document.getElementById("email").value;
-            var displaymail = document.getElementById("display_email");
-            displaymail.innerHTML = email;
-            var dob = document.getElementById("dob").value;
-            var displaybirth = document.getElementById("display_dob");
-            displaybirth.innerHTML = dob;
-            var address = document.getElementById("address").value;
-            var displayadd = document.getElementById("display_address");
-            displayadd.innerHTML = address;
-            // var beveragepreference = document.getElementById("tea").value;
-           var beveragepreference = [];
-            if (document.getElementById("tea").checked) {
-                beveragepreference.push("tea");
-            }
-            // display_tea.innerHTML = beveragepreference;
-            if (document.getElementById("coffee").checked) {
-                beveragepreference.push("coffee");
-            }
-            display_tea.innerHTML = beveragepreference;
+        // var sub = document.getElementById("sub");
+        // console.log(sub);
+        // sub.addEventListener("click", (e) => {
+        //     e.preventDefault();
+        //     var name = document.getElementById("name").value;
+        //     var display = document.getElementById("display_name").innerHTML = name;
+        //     // display.innerHTML = name;
+        //     var password = document.getElementById("password").value;
+        //     var displaypass = document.getElementById("display_password");
+        //     displaypass.innerHTML = password;
+        //     var email = document.getElementById("email").value;
+        //     var displaymail = document.getElementById("display_email");
+        //     displaymail.innerHTML = email;
+        //     var dob = document.getElementById("dob").value;
+        //     var displaybirth = document.getElementById("display_dob");
+        //     displaybirth.innerHTML = dob;
+        //     var address = document.getElementById("address").value;
+        //     var displayadd = document.getElementById("display_address");
+        //     displayadd.innerHTML = address;
+        //     // var beveragepreference = document.getElementById("tea").value;
+        //    var beveragepreference = [];
+        //     if (document.getElementById("tea").checked) {
+        //         beveragepreference.push("tea");
+        //     }
+        //     // display_tea.innerHTML = beveragepreference;
+        //     if (document.getElementById("coffee").checked) {
+        //         beveragepreference.push("coffee");
+        //     }
+        //     display_tea.innerHTML = beveragepreference;
+
+        //     gender = [];
+        //     if (document.getElementById("male").checked) {
+        //         gender.push("male");
+        //     }
+        //     if (document.getElementById("female").checked) {
+        //         gender.push("female");
+        //     }
+        //     display_male.innerHTML = gender;
+        //     meal = [];
+        //     if (document.getElementById("veg").checked) {
+        //         meal.push("veg");
+        //     }
+        //     if (document.getElementById("nonveg").checked) {
+        //         meal.push("nonveg");
+        //     }
+        //     display_veg.innerHTML = meal;
+
+
+
+        // //    var payment = [];
+
+        //    var payments=document.getElementById("display");
+        //    var pay=document.getElementById("payment");
+        //     // if (document.getElementById("credit").checked) {
+        //     //     payment.push("Credit Card");
+        //     // }
+        //     // if (document.getElementById("debit").checked) {
+        //     //     payment.push("Debit Card");
+        //     // }
+        //     // if (document.getElementById("cash").checked) {
+        //     //     payments.push("cash");
+        //     // }
+
+        //     //  evannnni avashram ledu ,,,,,,select id ni target chesi value tisko anthe!!!!!!!!!!
+
+        //     payments.innerHTML = pay.value;
+
+        //     // var payment = document.querySelector('select').value;
+        //     // document.getElementById("display_select").innerHTML = payment;
+
+        //     var sliders=document.getElementById("slider");
+        //     var slid = document.getElementById("display_slider");
+        //     slid.innerHTML = sliders.value;
+        // });
+
+        function displayFormData() {
+            const name = document.getElementById("name").value;
+            const password = document.getElementById("password").value;
+            const email = document.getElementById("email").value;
+            const dob = document.getElementById("dob").value;
+            const address = document.getElementById("address").value;
+
+            const tea = document.getElementById("tea").checked ? 'Tea' : '';
+            const coffee = document.getElementById("coffee").checked ? 'Coffee' : '';
+            const beveragePreference = [tea, coffee].filter(Boolean).join(', ');
 
             gender = [];
             if (document.getElementById("male").checked) {
@@ -415,7 +471,8 @@
             if (document.getElementById("female").checked) {
                 gender.push("female");
             }
-            display_male.innerHTML = gender;
+            // const gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').nextSibling.nodeValue.trim() : '';
+            // const meal = document.querySelector('input[name="meal"]:checked') ? document.querySelector('input[name="meal"]:checked').nextSibling.nodeValue.trim() : '';
             meal = [];
             if (document.getElementById("veg").checked) {
                 meal.push("veg");
@@ -423,35 +480,40 @@
             if (document.getElementById("nonveg").checked) {
                 meal.push("nonveg");
             }
-            display_veg.innerHTML = meal;
+            
 
+            const payment = document.getElementById("payment").value;
+            const slider = document.getElementById("slider").value;
 
+            // Updating the display fields dynamically
+            document.getElementById("display_name").innerText = name;
+            document.getElementById("display_password").innerText = password;
+            document.getElementById("display_email").innerText = email;
+            document.getElementById("display_dob").innerText = dob;
+            document.getElementById("display_address").innerText = address;
+            document.getElementById("display_tea").innerText = beveragePreference;
+            document.getElementById("display_gender").innerText = gender;
+            document.getElementById("display_meal").innerText = meal;
+            document.getElementById("display").innerText = payment;
+            document.getElementById("display_slider").innerText = slider;
+        }
 
-        //    var payment = [];
+        // Event listeners to trigger the display update
+        document.getElementById("name").addEventListener("input", displayFormData);
+        document.getElementById("password").addEventListener("input", displayFormData);
+        document.getElementById("email").addEventListener("input", displayFormData);
+        document.getElementById("dob").addEventListener("input", displayFormData);
+        document.getElementById("address").addEventListener("input", displayFormData);
+        document.getElementById("tea").addEventListener("change", displayFormData);
+        document.getElementById("coffee").addEventListener("change", displayFormData);
+        document.getElementById("male").addEventListener("change", displayFormData);
+        document.getElementById("female").addEventListener("change", displayFormData);
+        document.getElementById("veg").addEventListener("change", displayFormData);
+        document.getElementById("nonveg").addEventListener("change", displayFormData);
+        document.getElementById("payment").addEventListener("change", displayFormData);
+        document.getElementById("slider").addEventListener("input", displayFormData);
+    
 
-           var payments=document.getElementById("display");
-           var pay=document.getElementById("payment");
-            // if (document.getElementById("credit").checked) {
-            //     payment.push("Credit Card");
-            // }
-            // if (document.getElementById("debit").checked) {
-            //     payment.push("Debit Card");
-            // }
-            // if (document.getElementById("cash").checked) {
-            //     payments.push("cash");
-            // }
-
-            //  evannnni avashram ledu ,,,,,,select id ni target chesi value tisko anthe!!!!!!!!!!
-
-            payments.innerHTML = pay.value;
-
-            // var payment = document.querySelector('select').value;
-            // document.getElementById("display_select").innerHTML = payment;
-
-            var sliders=document.getElementById("slider");
-            var slid = document.getElementById("display_slider");
-            slid.innerHTML = sliders.value;
-        });
 
 
 
