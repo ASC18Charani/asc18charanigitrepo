@@ -7,5 +7,5 @@ export interface user {
     gender:  string,
     meal: string,
     payment: string,
-    slider: number;
+    slider: number
 }
