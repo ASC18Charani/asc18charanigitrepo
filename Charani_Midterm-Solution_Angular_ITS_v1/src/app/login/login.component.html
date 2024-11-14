@@ -1,0 +1,14 @@
+<br>
+<h4> Login </h4>
+<br>
+<div id="container">
+    <form [formGroup]="loginForm">
+        Login Id :
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" formControlName = "loginid"><br> <br>
+        Password : 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="password" formControlName = "password"><br> <br>
+        <button (click)="onSubmit()"> Login </button>
+    </form>
+</div>
