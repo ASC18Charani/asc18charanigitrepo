@@ -1,0 +1,48 @@
+<div class="container">
+    <br>
+    <h5>User Details</h5>
+    <div class="form-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by Id or Name" [(ngModel)]="searchTerm" (input)="filterUser()">
+        <!-- <button (click)="filterUser()" class="btn btn-primary ms-2"> Search </button> -->
+    </div>
+    <div>
+        <div class="table-striped" style="width:500px">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> ID </th>
+                        <th> Name </th>
+                        <th> Email </th>
+                        <th> Password </th>
+                        <th> Date</th>
+                        <th> Address </th>
+                        <th> BeveragePreference </th>
+                        <th> Gender </th>
+                        <th> Meal </th>
+                        <th> Payment </th>
+                        <th> Silder </th>
+                        <th> Send Away </th>
+                        <th> Change </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td> {{ user.id}} </td>
+                        <td> {{ user.name}} </td>
+                        <td> {{ user.email}} </td>
+                        <td> {{ user.password}} </td>
+                        <td> {{ user.dob}} </td>
+                        <td> {{ user.address}} </td>
+                        <td> {{ user.beveragepreference}} </td>
+                        <td> {{ user.gender}} </td>
+                        <td> {{ user.meal}} </td>
+                        <td> {{ user.payment}} </td>
+                        <td> {{ user.slider}} </td>
+                        <td><button (click)="deleteUser(user)" class="btn btn-danger"> Delete </button></td>
+                        <td><button (click)="updateUser(user.id)" class="btn btn-warning"> Update </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

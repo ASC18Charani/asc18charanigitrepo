@@ -1,0 +1,40 @@
+{
+    "user": [
+        {
+            "id": 10,
+            "name": "Swetha",
+            "password": "swetha123",
+            "email": "swetha@gmail.com",
+            "dob": "23/01/2002",
+            "address": "awsedrf",
+            "bevaragepreference": "tea",
+            "gender": "female",
+            "meal": "nonveg",
+            "payment": "debit card"
+        },
+        {
+            "id": 20,
+            "name": "Geetha",
+            "password": "geetha123",
+            "email": "geeetha@gmail.com",
+            "dob": "13/07/2002",
+            "address": "awstrfrf",
+            "bevaragepreference": "tea",
+            "gender": "female",
+            "meal": "veg",
+            "payment": "debit card"
+        },
+        {
+            "id": 30,
+            "name": "Bhavya",
+            "password": "bhavya123",
+            "email": "bhavya@gmail.com",
+            "dob": "20/01/2001",
+            "address": "awqwdfdf",
+            "bevaragepreference": "tea",
+            "gender": "female",
+            "meal": "nonveg",
+            "payment": "cash"
+        }
+    ]
+}

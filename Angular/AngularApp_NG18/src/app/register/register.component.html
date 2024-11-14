@@ -1,0 +1,24 @@
+<br>
+<h4>Register</h4>
+
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label> Admin Name </label>
+            <input type="text" formControlName="adminName" class="form-control" [ngClass]="{'is-invalid':registerForm.controls['adminName'].errors, 'boldItalicError':registerForm.controls['adminName'].errors}" />
+            <div *ngIf="registerForm.controls['adminName'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="registerForm.controls['adminName'].errors?.['required']">Admin Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" formControlName="email" class="form-control" [ngClass]="{'is-invalid' : registerForm.controls['email']?.errors}">
+            <div *ngIf=""
+
+        </div>
+        <br>
+        <div class="form-group">
+            <button class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</div>

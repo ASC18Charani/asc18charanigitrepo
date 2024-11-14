@@ -336,12 +336,12 @@
 <!-- <router-outlet /> -->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
   <title>Forms</title>
-  <!-- specifies this is a html 5 document -->
+  <!-- specifies this is a html 5 document
   <style>
     .header,
     .footer {
@@ -408,16 +408,16 @@
     <h1>Bangalore Hotel</h1>
     <p>Welcome to our Hotel. Please fill out the details below.</p>
   </div>
-  <br> <br> -->
+  <br> <br> 
 
 
   <h1 style="font-style:italic; margin-left: 270px; margin-bottom: 20px;">Registration Form</h1>
   <div style="background-color: rgb(106, 139, 139); width: 80%">
-    <!-- <form style="background-color: red;"> -->
+    <!-- <form style="background-color: red;"> 
 
     <form>
       <div style="padding:50px">
-        <table style="width:700px;padding-top:100px;"> <!--background-color: yellow;" -->
+        <table style="width:700px;padding-top:100px;"> <!--background-color: yellow;"
           <tr>
             <td class="td1"> Enter your Name : </td>
 
@@ -479,7 +479,7 @@
         </table>
       </div>
       <br>
-      <!-- <center> -->
+      <!-- <center>
       <div class="center-container">
         <div class="form-buttons">
           <input value="Register Now!" type="submit" style="color:red; 
@@ -487,7 +487,7 @@
      height: 50px;width:120px; margin-bottom: 20px;" onclick="alert('You have Registered');">
           <!-- <button type="submit" class="btn btn-primary" onclick="alert('Your form is submitted');">
           submit
-        </button> -->
+        </button> 
           <input value="Reset!" type="submit" style="color:red;
      font-weight: bold; background-color: yellow;
     height: 50px;width:100px;" onclick='alert("Your form will reset");console.log("Your form will reset")'>
@@ -495,7 +495,7 @@
       </div>
 
 
-      <!-- </center> -->
+      <!-- </center> 
 
     </form>
   </div>
@@ -504,7 +504,31 @@
   <!-- <div class="footer">
     <p>&copy; 2024 Charani. All rights reserved.</p>
     <p>Contact us at <a href="abc"&#64;"gmail.com">adb"&#64;"gmail.com</a></p>
-  </div> -->
+  </div> 
 </body>
 
-</html>
+</html> -->
+
+
+<h1> My Angular App...</h1> <br>
+<h2> Property : {{title}}</h2>
+<h3> List of Employees</h3>
+<!-- <ol *ngFor= "Let employee of employees">
+  <li>{{employee.id}}</li>
+</ol> -->
+<table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Salary</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.id}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.salary}}</td>
+    </tr>
+  </tbody>
+</table>

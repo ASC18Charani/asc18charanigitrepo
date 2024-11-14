@@ -1,0 +1,11 @@
+body{
+    background-image: url("../public/OIP.jpg");
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    text-decoration-line: underline;
+}
+h3{
+    text-align: center;
+}

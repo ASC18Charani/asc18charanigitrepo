@@ -1,4 +1,4 @@
-import {Product} from ".product";
+import {Product} from "./product";
 export class ProductManager {
     private products:Product[] = [];
     addProduct(product : Product):void {
