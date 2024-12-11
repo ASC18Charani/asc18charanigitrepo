@@ -1,0 +1,113 @@
+<div class="coursecontainer">
+
+    <div class="container mt-5">
+        <h5> Courses </h5>
+    <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-primary" (click)="addCourse()">
+            <i class="bi bi-plus-circle"></i> Add Course
+        </button>
+        <!-- <a routerLink="/addcourse" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Add Course
+        </a> -->
+         &nbsp;&nbsp;
+        <a routerLink="/dashboard" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by Id or Name" [(ngModel)]="searchTerm"
+            (input)="FilteredCourses()">
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Trainer</th>
+                    <th>Price</th>
+                    <th>Change</th>
+                    <th>Send Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let course of displayedCourses">
+                    <td>{{ course.id }}</td>
+                    <td>{{ course.name }}</td>
+                    <td>{{ course.description }}</td>
+                    <td>{{ course.trainer }}</td>
+                    <td>{{ course.price }}</td>
+                    <td>
+                        <button (click)="editCourse(course)" class="btn btn-warning btn-sm">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="deleteCourse(course.id)" class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+                <tr *ngIf="displayedCourses.length === 0">
+                    <td colspan="7" class="text-center text-muted">
+                        No courses found.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<!-- <div class="container mt-5">
+    <h5>Courses</h5>
+
+ 
+    <div class="form-group mb-3">
+        <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Search by ID or Name" 
+            [(ngModel)]="searchTerm" 
+            (input)="updateFilteredCourses()">
+    </div>
+
+    
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr *ngFor="let course of displayedCourses">
+                    <td>{{ course.id }}</td>
+                    <td>{{ course.name }}</td>
+                    <td>{{ course.description }}</td>
+                    <td>
+                        <button 
+                            (click)="editCourse(course)" 
+                            class="btn btn-warning btn-sm">
+                            Edit
+                        </button>
+                        <button 
+                            (click)="deleteCourse(course.id)" 
+                            class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+               
+                <tr *ngIf="displayedCourses.length === 0">
+                    <td colspan="4" class="text-center text-muted">
+                        No courses found.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->

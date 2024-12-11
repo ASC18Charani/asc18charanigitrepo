@@ -1,0 +1,83 @@
+<!-- <div class="container mt-5">
+    <h4 class="mb-4 text-center">Course Form</h4>
+    <form [formGroup]="courseForm" (ngSubmit)="addCourse()">
+      
+    
+      <div class="form-group mb-3">
+        <label for="name" class="form-label">Course Name:</label>
+        <input type="text" class="form-control" formControlName="name" required placeholder="Enter course name"/>
+        <div *ngIf="courseForm.get('name')?.invalid && courseForm.get('name')?.touched" class="text-danger">
+          <div *ngIf="courseForm.get('name')?.errors?.['required']">Name is required.</div>
+          <div *ngIf="courseForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters.</div>
+        </div>
+      </div>
+      
+   
+      <div class="form-group mb-4">
+        <label for="description" class="form-label">Description:</label>
+        <input type="text" class="form-control" formControlName="description" required placeholder="Enter course description"/>
+        <div *ngIf="courseForm.get('description')?.invalid && courseForm.get('description')?.touched" class="text-danger">
+          <div *ngIf="courseForm.get('description')?.errors?.['required']">Description is required.</div>
+        </div>
+      </div>
+      
+      
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-success" [disabled]="courseForm.invalid" style="width: 48%;"> Update </button>
+        <button type="reset" class="btn btn-info" (click)="resetForm()"style="width: 48%;"> Clear </button>
+      </div>
+    </form>
+  </div> -->
+
+<div class="updatecoursecontainer">
+  <div class="container mt-5">
+    <h4 class="mb-4 text-center">Update Course</h4>
+    <form [formGroup]="courseForm" (ngSubmit)="updateCourse()">
+      
+      <!-- Name Input -->
+      <div class="form-group mb-3">
+        <label for="name" class="form-label">Course Name:</label>
+        <input type="text" class="form-control" formControlName="name" required placeholder="Enter course name" />
+        <div *ngIf="courseForm.get('name')?.invalid && courseForm.get('name')?.touched" class="text-danger">
+          <div *ngIf="courseForm.get('name')?.errors?.['required']">Name is required.</div>
+          <div *ngIf="courseForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters.</div>
+        </div>
+      </div>
+      
+      <!-- Description Input -->
+      <div class="form-group mb-4">
+        <label for="description" class="form-label">Description:</label>
+        <input type="text" class="form-control" formControlName="description" required placeholder="Enter course description" />
+        <div *ngIf="courseForm.get('description')?.invalid && courseForm.get('description')?.touched" class="text-danger">
+          <div *ngIf="courseForm.get('description')?.errors?.['required']">Description is required.</div>
+        </div>
+      </div>
+
+
+      <div class="form-group mb-4">
+        <label for="trainer" class="form-label">Trainer:</label>
+        <input type="text" class="form-control" formControlName="trainer" required placeholder="Enter trainer name" />
+        <div *ngIf="courseForm.get('trainer')?.invalid && courseForm.get('trainer')?.touched" class="text-danger">
+          <div *ngIf="courseForm.get('trainer')?.errors?.['required']">Trainer is required.</div>
+        </div>
+      </div>
+
+      <!-- Price Input -->
+      <div class="form-group mb-4">
+        <label for="price" class="form-label">Price:</label>
+        <input type="number" class="form-control" formControlName="price" required placeholder="Enter course price" />
+        <div *ngIf="courseForm.get('price')?.invalid && courseForm.get('price')?.touched" class="text-danger">
+          <div *ngIf="courseForm.get('price')?.errors?.['required']">Price is required.</div>
+        </div>
+      </div>
+
+  
+      <!-- Submit and Reset Buttons -->
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-success" [disabled]="courseForm.invalid" style="width: 48%;">Update Course</button>
+        <button type="button" class="btn btn-info" (click)="resetForm()" style="width: 48%;">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+  

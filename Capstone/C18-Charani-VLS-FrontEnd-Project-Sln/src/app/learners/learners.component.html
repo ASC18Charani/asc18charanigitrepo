@@ -1,0 +1,61 @@
+<div class="learnercontainer">
+<div class="container mt-5">
+    <h5> Learners </h5>
+    <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-primary" (click)="addLearner()">
+            <i class="bi bi-plus-circle"></i> Add Learner
+        </button>
+         &nbsp;&nbsp;
+        <a routerLink="/dashboard" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+        <!-- <button class="btn btn-primary" (click)="addLearner()">
+            <i class="bi bi-plus-circle"></i> Add Learner
+        </button> -->
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by Id or Name" [(ngModel)]="searchTerm"
+            (input)="FilteredLearners()">
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>Trainer</th>
+                    <th>Payment Method</th>
+                    <th>Change</th>
+                    <th>Send Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let learner of displayedLearners">
+                    <td>{{ learner.id }}</td>
+                    <td>{{ learner.name }}</td>
+                    <td>{{ learner.email }}</td>
+                    <td>{{ learner.course }}</td>
+                    <td>{{ learner.trainer }}</td>
+                    <td>{{ learner.paymentmethod }}</td>
+                    <td>
+                        <button (click)="editLearner(learner)" class="btn btn-warning btn-sm">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="deleteLearner(learner.id)" class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+                <tr *ngIf="displayedLearners.length === 0">
+                    <td colspan="8" class="text-center text-muted">
+                        No learners found.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+

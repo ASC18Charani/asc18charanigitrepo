@@ -1,0 +1,215 @@
+{
+  "courses": [
+    {
+      "id": "C0001",
+      "name": "Angular Basics",
+      "description": "Learn the fundamentals of Angular",
+      "trainer": "Subbu",
+      "price": 20000
+    },
+    {
+      "id": "C0002",
+      "name": "Spring Boot",
+      "description": "Introduction to Spring Boot",
+      "trainer": "Subbu",
+      "price": 10000
+    },
+    {
+      "id": "c174",
+      "name": "fhgjkhgfdxc",
+      "description": "uftghkh",
+      "trainer": "Uday",
+      "price": 5000
+    },
+    {
+      "id": "4f43",
+      "name": "txfchgvvvvvvv",
+      "description": "iukjghdf",
+      "trainer": "Sandeep",
+      "price": 8000
+    }
+  ],
+  "authors": [
+    {
+      "id": "A0001",
+      "name": "John Doe",
+      "course": "Angular Basics",
+      "description": "Expert in Frontend Development",
+      "rating": 4
+    },
+    {
+      "id": "A0002",
+      "name": "Jane Smith",
+      "course": "Spring Boot",
+      "description": "Backend Developer with 10+ years of experience",
+      "rating": 5
+    },
+    {
+      "id": "6f9f",
+      "name": "sextuvghbi",
+      "course": "cvghjb",
+      "description": "dfgcaZa",
+      "rating": 3
+    }
+  ],
+  "learners": [
+    {
+      "id": "L0001",
+      "name": "Alice Johnson",
+      "email": "alice@gmail.com",
+      "course": "Angular Basics",
+      "trainer": "Subbu",
+      "paymentmethod": "UPi"
+    },
+    {
+      "id": "L0002",
+      "name": "Bob Brown",
+      "email": "bob@gmail.com",
+      "course": "Spring Boot",
+      "trainer": "Subbu",
+      "paymentmethod": "Debit Card"
+    },
+    {
+      "id": "aae9",
+      "name": "ased",
+      "email": "cgfjv@gmail.com",
+      "course": "asde",
+      "trainer": "Uday",
+      "paymentmethod": "Credit Card"
+    },
+    {
+      "id": "32b1",
+      "name": "cvftryj",
+      "email": "sfsdkjyg@gmail.com",
+      "course": "cvfthn",
+      "trainer": "Sandeep",
+      "paymentmethod": "UPi"
+    },
+    {
+      "id": "d71f",
+      "name": "cvftryj",
+      "email": "kgdzxfcg@gmail.com",
+      "course": "cvfthn",
+      "trainer": "Bhargav",
+      "paymentmethod": "Debit Card"
+    },
+    {
+      "id": "a74a",
+      "name": "cvftryj",
+      "email": "ghyfuhinjo@gmail.com",
+      "course": "cvfthnnnn",
+      "trainer": "Uday",
+      "paymentmethod": "Credit Card"
+    },
+    {
+      "id": "3606",
+      "name": "rxtcyvg",
+      "email": "srdftgc@gmail.com",
+      "course": "dxfcvguftgj",
+      "trainer": "estcyvghubj",
+      "paymentmethod": "Debit Card"
+    }
+  ],
+  "registrations": [
+    {
+      "id": "R0001",
+      "name": "Alice Johnson",
+      "email": "alice@gmail.com",
+      "phone": 1234567890,
+      "password": "alice@123"
+    },
+    {
+      "id": "R0002",
+      "name": "Bob Brown",
+      "email": "bob@gmail.com",
+      "phone": 2134356745,
+      "password": "bob@123"
+    },
+    {
+      "id": "fa19",
+      "name": "Charanii",
+      "email": "charani@gmail.com",
+      "phone": "1212121212",
+      "password": "Charani@123"
+    },
+    {
+      "id": "9e5c",
+      "name": "Dharani",
+      "email": "dharani@gmail.com",
+      "phone": "1231231231",
+      "password": "Dharani@123"
+    },
+    {
+      "id": "c4d5",
+      "name": "Harani",
+      "email": "harani@gmail.com",
+      "phone": "1234123412",
+      "password": "Harani@123"
+    },
+    {
+      "id": "3bf5",
+      "name": "Bharani",
+      "email": "bharani@gmail.com",
+      "phone": "1212121213",
+      "password": "Bharani@123"
+    },
+    {
+      "id": "0c5e",
+      "email": "sarani@gmail.com",
+      "phone": "3234123412",
+      "name": "sarani",
+      "password": "Sarani@123"
+    },
+    {
+      "id": "f285",
+      "email": "bodha@gmail.com",
+      "phone": "1234512121",
+      "name": "wagASA",
+      "password": "Bodha@123"
+    },
+    {
+      "id": "44dd",
+      "name": "Harani",
+      "email": "tharani@gmail.com",
+      "phone": "9876543210",
+      "password": "Admin@123"
+    },
+    {
+      "id": "a86e",
+      "email": "gaurav@singh.com",
+      "phone": "8888888888",
+      "name": "Gaurav Singh",
+      "password": "Gaurav@12"
+    },
+    {
+      "id": "d5d7",
+      "email": "komal@gmail.com",
+      "phone": "8989898989",
+      "name": "komal",
+      "password": "Komal@123"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "V0001",
+      "name": "Pavitra",
+      "course": "Angular Basics",
+      "review": "Excellent course, very detailed!",
+      "rating": 4
+    },
+    {
+      "id": "V0002",
+      "name": "Komal",
+      "course": "Spring Boot",
+      "review": "Great explanation of Spring concepts.",
+      "rating": 3
+    },
+    {
+      "id": "f3c1",
+      "name": "rstvgh",
+      "course": "sdtrnjk",
+      "review": "syvghbnj",
+      "rating": 4
+    }
+  ]
+}

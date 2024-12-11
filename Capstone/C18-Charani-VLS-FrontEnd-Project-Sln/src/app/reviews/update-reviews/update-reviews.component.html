@@ -1,0 +1,54 @@
+<div class="updatereviewcontainer">
+    <div class="container mt-5">
+    <h4 class="mb-4 text-center">Update Review</h4>
+    <form [formGroup]="reviewForm" (ngSubmit)="updateReview()">
+
+
+        <div class="form-group mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" formControlName="name" required placeholder="Enter review name" />
+            <div *ngIf="reviewForm.get('name')?.invalid && reviewForm.get('name')?.touched" class="text-danger">
+                <div *ngIf="reviewForm.get('name')?.errors?.['required']">Name is required.</div>
+                <div *ngIf="reviewForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters.</div>
+            </div>
+        </div>
+      
+      <div class="form-group mb-3">
+        <label for="course" class="form-label">Course:</label>
+        <input type="text" class="form-control" formControlName="course" required placeholder="Enter review course" />
+        <div *ngIf="reviewForm.get('course')?.invalid && reviewForm.get('course')?.touched" class="text-danger">
+          <div *ngIf="reviewForm.get('course')?.errors?.['required']">Course is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="review" class="form-label">Review :</label>
+        <input type="text" class="form-control" formControlName="review" required placeholder="Enter review" />
+        <div *ngIf="reviewForm.get('review')?.invalid && reviewForm.get('review')?.touched" class="text-danger">
+          <div *ngIf="reviewForm.get('review')?.errors?.['required']">Review is required.</div>
+          <div *ngIf="reviewForm.get('review')?.errors?.['minlength']">Review must be at least 3 characters.</div>
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="rating" class="form-label">Rating:</label>
+        <div>
+          <ng-container *ngFor="let star of stars; let i = index">
+            <i class="bi bi-star" [class.filled]="i < selectedRating" (click)="setRating(i + 1)" (mouseover)="hoverRating(i + 1)" (mouseleave)="hoverRating(0)">
+                
+            </i>
+          </ng-container>
+        </div>
+        <div class="text-muted mt-2">Selected Rating: {{ selectedRating }}/5</div>
+        <div *ngIf="reviewForm.get('rating')?.invalid && reviewForm.get('rating')?.touched" class="text-danger">
+          <div *ngIf="reviewForm.get('rating')?.errors?.['required']">Rating is required.</div>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-success" [disabled]="reviewForm.invalid" style="width: 48%;">Update Review</button>
+        <button type="button" class="btn btn-info" (click)="resetForm()" style="width: 48%;">Reset</button>
+      </div>
+    </form>
+  </div>
+  </div>

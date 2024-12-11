@@ -1,0 +1,158 @@
+/* .container {
+    margin-top: 5rem;
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .text-primary:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+    */
+
+
+   /* Container and alignment */
+/* .container {
+    margin-top: 5rem;
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .text-primary:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  
+   .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  } 
+  
+ 
+ .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  body {
+  margin: 0;
+  height: 100vh;
+  background-image: url('./../../../public/hii.jpg');  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  z-index: 1; 
+}
+
+.card {
+  z-index: 2;
+}  */
+
+
+
+/* Full Page Background Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/../../../public/hii.jpg'); /* Path to your image */
+    background-size: cover; /* Make the image cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+  }
+  
+  /* Container Styling */
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Add a subtle white overlay */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  /* Text Content Styling */
+  .text-content {
+    color: #343a40; /* Subtle dark color */
+    margin-bottom: 20px;
+  }
+  
+  .text-content h3 {
+    font-size: 2rem;
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+  }
+  
+  /* Card Styling */
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Inputs */
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  .form-control:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .text-primary:hover {
+    text-decoration: underline;
+  }
+  

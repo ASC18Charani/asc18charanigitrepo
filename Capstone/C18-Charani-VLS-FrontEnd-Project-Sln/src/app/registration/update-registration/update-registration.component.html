@@ -1,0 +1,117 @@
+<!-- <div class="container mt-5">
+    <h4 class="mb-4 text-center">Update Registration</h4>
+    <form [formGroup]="registrationForm" (ngSubmit)="updateRegisteration()">
+      
+            <div class="form-group mb-3">
+            <label for="name" class="form-label">Registration Name</label>
+            <input id="name" formControlName="name" class="form-control" type="text" />
+            <div *ngIf="registrationForm.get('name')?.invalid && registrationForm.get('name')?.touched" class="text-danger">
+              <small *ngIf="registrationForm.get('name')?.errors?.['required']">Name is required.</small>
+              <small *ngIf="registrationForm.get('name')?.errors?.['pattern']">
+                Name cannot contain numbers or special characters.
+              </small>
+            </div>
+          </div>
+         
+            <div class="form-group mb-4">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" formControlName="email" class="form-control" type="email" />
+            <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-danger">
+              <small *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required.</small>
+              <small *ngIf="registrationForm.get('email')?.errors?.['email']">Invalid email format.</small>
+              <small *ngIf="emailInUse">This email is already in use.</small>
+            </div>
+          </div>
+          <div class="form-group mb-4">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input id="phone" formControlName="phone" class="form-control" type="text" />
+            <div *ngIf="registrationForm.get('phone')?.invalid && registrationForm.get('phone')?.touched" class="text-danger">
+              <small *ngIf="registrationForm.get('phone')?.errors?.['required']">Phone number is required.</small>
+              <small *ngIf="registrationForm.get('phone')?.errors?.['pattern']">Invalid phone number format.</small>
+              <small *ngIf="phoneInUse">This phone number is already in use.</small>
+            </div>
+          </div>
+          <div class="form-group mb-4">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" formControlName="password" class="form-control" type="password" />
+            <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="text-danger">
+              <small *ngIf="registrationForm.get('password')?.errors?.['required']">Password is required.</small>
+              <small *ngIf="registrationForm.get('password')?.errors?.['pattern']">
+                Password must include uppercase, lowercase, digit, and special character.
+              </small>
+            </div>
+          </div>
+         
+          <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success" [disabled]="registrationForm.invalid" style="width: 48%;"> Update Registration </button>
+            <button type="reset" class="btn btn-info" (click)="resetForm()"style="width: 48%;"> Clear </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="updateregistrationcontainer">
+  <div class="container mt-5">
+    <h4 class="mb-4 text-center">Registration Form</h4>
+    <form [formGroup]="registrationForm" (ngSubmit)="updateRegistration()">
+  
+      <!-- Name Field -->
+      <div class="form-group mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" formControlName="name" class="form-control" type="text" />
+        <div *ngIf="registrationForm.get('name')?.invalid && registrationForm.get('name')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('name')?.errors?.['required']">Name is required.</small>
+          <small *ngIf="registrationForm.get('name')?.errors?.['pattern']">Name cannot contain numbers or special characters.</small>
+        </div>
+      </div>
+  
+      <!-- Email Field -->
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" formControlName="email" class="form-control" type="email" />
+        <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required.</small>
+          <small *ngIf="registrationForm.get('email')?.errors?.['email']">Invalid email format.</small>
+          <small *ngIf="emailInUse">This email is already in use.</small>
+        </div>
+      </div>
+  
+      <!-- Phone Field -->
+      <div class="form-group mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input id="phone" formControlName="phone" class="form-control" type="text" />
+        <div *ngIf="registrationForm.get('phone')?.invalid && registrationForm.get('phone')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('phone')?.errors?.['required']">Phone number is required.</small>
+          <small *ngIf="registrationForm.get('phone')?.errors?.['pattern']">Phone number must be exactly 10 digits.</small>
+          <small *ngIf="phoneInUse">This phone number is already in use.</small>
+        </div>
+      </div>
+  
+      <!-- Password Field -->
+      <div class="form-group mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" formControlName="password" class="form-control" type="password" />
+        <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('password')?.errors?.['required']">Password is required.</small>
+          <small *ngIf="registrationForm.get('password')?.errors?.['pattern']">
+            Password must include an uppercase letter, a lowercase letter, a digit, and a special character.
+          </small>
+        </div>
+      </div>
+  
+      <!-- General Error Message -->
+      <div *ngIf="formErrorMessage" class="text-danger mb-3">
+        {{ formErrorMessage }}
+      </div>
+  
+      <!-- Buttons -->
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-success" [disabled]="registrationForm.invalid">Update</button>
+        <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  
+
