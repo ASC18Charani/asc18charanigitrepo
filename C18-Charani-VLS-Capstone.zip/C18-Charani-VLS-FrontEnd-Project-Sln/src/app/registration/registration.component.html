@@ -1,0 +1,57 @@
+<div class="registrationcontainer">
+<div class="container mt-5">
+    <h5> Registrations </h5>
+    <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-primary" (click)="addRegistration()">
+            <i class="bi bi-plus-circle"></i> Add Admin
+        </button>
+        &nbsp;&nbsp;
+        <a routerLink="/dashboard" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by Id or Name" [(ngModel)]="searchTerm"
+            (input)="FilteredRegistrations()">
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Password</th>
+                    <th>Change</th>
+                    <th>Send Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let registration of displayedRegistrations">
+                    <td>{{ registration.id }}</td>
+                    <td>{{ registration.name }}</td>
+                    <td>{{ registration.email }}</td>
+                    <td>{{ registration.phone }}</td>
+                    <td>{{ registration.password }}</td>
+                    <td>
+                        <button (click)="editRegistration(registration)" class="btn btn-warning btn-sm">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="deleteRegistration(registration.id)" class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+                <tr *ngIf="displayedRegistrations.length === 0">
+                    <td colspan="7" class="text-center text-muted">
+                        No registrations found.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+

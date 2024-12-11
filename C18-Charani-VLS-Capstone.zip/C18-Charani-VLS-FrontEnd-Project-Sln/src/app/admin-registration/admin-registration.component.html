@@ -1,0 +1,52 @@
+<div class="admincontainer">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <form [formGroup]="registrationForm" (ngSubmit)="onRegister()" class="card p-4 shadow-sm">
+          <h2 class="text-center mb-4">Sign Up as Admin</h2>
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input id="name" formControlName="name" class="form-control" type="text" />
+            <div *ngIf="registrationForm.get('name')?.invalid && registrationForm.get('name')?.touched" class="text-danger">
+              <small *ngIf="registrationForm.get('name')?.errors?.['required']">Name is required.</small>
+              <small *ngIf="registrationForm.get('name')?.errors?.['pattern']">
+                Name cannot contain numbers or special characters.
+              </small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" formControlName="email" class="form-control" type="email" />
+            <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-danger">
+              <small *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required.</small>
+              <small *ngIf="registrationForm.get('email')?.errors?.['email']">Invalid email format.</small>
+              <small *ngIf="emailInUse">This email is already in use.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input id="phone" formControlName="phone" class="form-control" type="text" />
+            <div *ngIf="registrationForm.get('phone')?.invalid && registrationForm.get('phone')?.touched" class="text-danger">
+              <small *ngIf="registrationForm.get('phone')?.errors?.['required']">Phone number is required.</small>
+              <small *ngIf="registrationForm.get('phone')?.errors?.['pattern']">Invalid phone number format.</small>
+              <small *ngIf="phoneInUse">This phone number is already in use.</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" formControlName="password" class="form-control" type="password" />
+            <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="text-danger">
+              <small *ngIf="registrationForm.get('password')?.errors?.['required']">Password is required.</small>
+              <small *ngIf="registrationForm.get('password')?.errors?.['pattern']">
+                Password must include uppercase, lowercase, digit, and special character.
+              </small>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100" [disabled]="registrationForm.invalid">Register</button>
+          <p class="text-danger mt-3" *ngIf="formErrorMessage">{{ formErrorMessage }}</p>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  

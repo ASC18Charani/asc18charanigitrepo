@@ -1,0 +1,64 @@
+<div class="reviewcontainer">
+<div class="container mt-5">
+    <h5> Reviews </h5>
+    <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-primary" (click)="addReview()">
+            <i class="bi bi-plus-circle"></i> Add Review
+        </button>
+        &nbsp;&nbsp;
+        <a routerLink="/dashboard" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by Id or Name" [(ngModel)]="searchTerm"
+            (input)="FilteredReviews()">
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Review</th>
+                    <th>Rating</th>
+                    <th>Change</th>
+                    <th>Send Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let review of displayedReviews">
+                    <td>{{ review.id }}</td>
+                    <td>{{ review.name }}</td>
+                    <td>{{ review.course }}</td>
+                    <td>{{ review.review }}</td>
+                    <!-- <td>{{ review.rating }}</td> -->
+                     <td>
+                     <div class="star-rating">
+                            <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+                              <i class="bi bi-star" [class.filled]="i < review.rating"></i>
+                            </ng-container>
+                          </div> 
+                          </td>
+                          <td>
+
+                        <button (click)="editReview(review)" class="btn btn-warning btn-sm">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="deleteReview(review.id)" class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+                <tr *ngIf="displayedReviews.length === 0">
+                    <td colspan="7" class="text-center text-muted">
+                        No reviews found.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+

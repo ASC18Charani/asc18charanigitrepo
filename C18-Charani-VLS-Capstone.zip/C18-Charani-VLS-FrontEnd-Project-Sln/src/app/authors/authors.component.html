@@ -1,0 +1,67 @@
+<div class="authorcontainer">
+<div class="container mt-5">
+    <h5> Authors </h5>
+    <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-primary" (click)="addAuthor()">
+            <i class="bi bi-plus-circle"></i> Add Author
+        </button>
+        &nbsp;&nbsp;
+        <a routerLink="/dashboard" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+        <!-- <button class="btn btn-primary" (click)="addCourse()">
+            <i class="bi bi-plus-circle"></i> Add Author
+        </button> -->
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by Id or Name" [(ngModel)]="searchTerm"
+        (input)="FilteredAuthors()">
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Rating</th>
+                    <th>Change</th>
+                    <th>Send Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let author of displayedAuthors">
+                    <td>{{ author.id }}</td>
+                    <td>{{ author.name }}</td>
+                    <td>{{ author.course }}</td>
+                    <td>{{ author.description }}</td>
+                    <!-- <td>{{ author.rating }}</td> -->
+
+                    <td>
+                        <div class="star-rating">
+                               <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+                                 <i class="bi bi-star" [class.filled]="i < author.rating"></i>
+                               </ng-container>
+                             </div> 
+                             </td>
+
+                    <td>
+                        <button (click)="editAuthor(author)" class="btn btn-warning btn-sm">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="deleteAuthor(author.id)" class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+                <tr *ngIf="displayedAuthors.length === 0">
+                    <td colspan="7" class="text-center text-muted">
+                        No authors found.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

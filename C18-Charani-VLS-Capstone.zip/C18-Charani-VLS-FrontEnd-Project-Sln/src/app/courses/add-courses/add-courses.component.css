@@ -1,0 +1,93 @@
+/* Full-page background styling */
+.addcoursecontainer {
+    background: url("../../../../public/background-image.avif") no-repeat center center fixed;
+    background-size: cover; /* Cover the entire viewport */
+    min-height: 100vh; /* Ensure it spans the full viewport height */
+    width: 100%; /* Full page width */
+    padding: 20px; /* Add padding for content */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Inner content container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the container */
+    max-width: 600px; /* Set a max width for the form */
+    width: 100%; /* Ensure responsiveness */
+}
+
+/* Heading Styling */
+.container h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+.form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+/* Input and Button Styling */
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 10px;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+/* Form Buttons Container */
+.d-flex {
+    margin-top: 15px;
+}
+
+button {
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Validation Error Styling */
+.text-danger {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
